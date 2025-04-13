@@ -16,7 +16,7 @@ dotenv.config({
 const app = express();
 app.use(cors());
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+
 app.post("/search/pagesearch", trycatchhandler(mainpagesearch,(err)=>{console.log(err)}))
 app.post("/search/searchbarquery",trycatchhandler(searchbarquery,(err)=>{console.log(err.message)}))
 app.listen(LISTENING_PORT,()=>{
@@ -24,7 +24,5 @@ app.listen(LISTENING_PORT,()=>{
 })
 app.post("/search/medicsearch",trycatchhandler(medicsearch,(err,res)=>{console.log(err.message)
 res.send(err.message)}))
-// console.log(await searchbarquery({body:{query:"anu"}}));
-// console.log(await redis.jsongetAll("anu","search"));
-// redisgetcomp("Alecensa 150mg Capsule")
+
 app.post("/getrandomdata",trycatchhandler(getrandom,(err,res)=>{console.log(err.message);res.send(err.message)}));
