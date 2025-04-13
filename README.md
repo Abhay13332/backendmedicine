@@ -6,7 +6,20 @@
  #commands to bind docker to this db
  ```
 docker pull mongo
-docker run -d --name mongodb -v pathofyourdevice:/data/db -p 27017:27017 mongo
+docker run -d --name mongodb -v {pathinyourdevicetomongodbfile}:/data/db -p 27017:27017 mongo
 
 ```
- 
+#redis setup
+```
+docker pull redis/redis-stack:latest
+docker run -d --name redis-stack  -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+```
+if you use online redos then put it to .env
+it is compulsory
+#node backend run
+```
+npm run dev as it is fully configured
+```
+```
+frontend need to this backeend
+```
