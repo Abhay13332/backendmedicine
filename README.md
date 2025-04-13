@@ -1,4 +1,11 @@
+# apiendppoints
+```
 
+/search/pagesearch:for erxact search for alternatives with same composition for searched medicine
+/search/searchbarquery:fuzzy search so user can see options when typing on searchbar
+/search/medicsearch:details for exact medicines
+/getrandomdata:to display randomdata
+```
  # backendmedicine
  here mongodb is database that is used in project
  here two dbs are used redis for caching and mongodb for datastore.
@@ -34,10 +41,4 @@ here redis is used for caching so mongodb does not require to fetch again and ag
 1.redis :used for caching so we dont need to query to mongodb as it caches queries for some time.
 2.data of 1.2 lakh medicines
 ```
-# apiendppoints
-```
 
-/search/pagesearch:for erxact search for alternatives with same composition for searched medicine
-/search/searchbarquery:fuzzy search so user can see options when typing on searchbar
-/search/medicsearch:details for exact medicines
-/getrandomdata:to display randomdata
