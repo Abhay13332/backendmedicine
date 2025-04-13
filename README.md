@@ -1,3 +1,11 @@
+ntoe:this is team project for byteverse team members 
+```
+satyam jha
+anand k thakur
+abhay singh
+anshuman singh
+
+```
 # apiendppoints
 ```
 
