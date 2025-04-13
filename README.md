@@ -27,3 +27,5 @@ npm run dev as it is fully configured
 ```
 frontend need to this backeend
 ```
+here redis is used for caching so mongodb does not require to fetch again and again
+
