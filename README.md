@@ -28,6 +28,18 @@ docker pull mongo
 docker run -d --name mongodb -v {pathinyourdevicetomongodbfile}:/data/db -p 27017:27017 mongo
 
 ```
+
+ ### 🔄 Reassembling the MongoDB Data
+If you cloned this repository and want to restore the raw data files, run this command in your terminal to combine the chunks back into the full source files:
+
+```bash
+cat data/mongo_mdatas_part_* > data/mongo_mdatas.json
+cat data/kaggle_medicines_part_* > data/kaggle_medicines.json
+```
+***
+
+Would you like help writing a quick **shell script** to automate this split-and-merge process for your repository workflow?
+
 # redis setup
 ```
 docker pull redis/redis-stack:latest
