@@ -38,7 +38,6 @@ cat data/kaggle_medicines_part_* > data/kaggle_medicines.json
 ```
 ***
 
-Would you like help writing a quick **shell script** to automate this split-and-merge process for your repository workflow?
 
 # redis setup
 ```
