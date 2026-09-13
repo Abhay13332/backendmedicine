@@ -21,10 +21,8 @@ export const getrandomdata=async (model_details,size=10)=>{
 return data;
 }
 export const getrandom=async (req,res)=>{
-    console.log("hj");
     let model_name=req.body.query;
     let size=req.body.size;
-    console.log("hj"+model_name);
 
     let model_details=querytomodel(model_name);
    let result = await  getrandomdata(model_details,size);

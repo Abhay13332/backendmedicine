@@ -49,7 +49,7 @@ end
      for (let i = 1; i < medicdetails.length - 1; i += 2) {
          finalres.push( JSON.parse(medicdetails[i + 1][1]))
      }
-console.log(finalres);
+// console.log(finalres);
 return finalres;
 }
  const redisgetbyname=async (queryname,model_details)=>{
@@ -79,36 +79,39 @@ return finalres;
  const addredis=async(document,model_details)=>{
    let  resultpushable=await model_details[0].populate(document,{path:"data"}) ;
    const whereagg=redis.where(model_details[1],5*60);
+//    console.log(resultpushable[0])
    resultpushable.forEach(item=>{
-       whereagg.jsonset(item[model_details[2]],item,model_details[1]);
+       
+       whereagg.jsonset(item[model_details[2]],item);
    })
     await whereagg.exec();
 }
 
 export const mainpagesearch=async (req,res)=>{
+    // return;
     let query =req.body.query ;
 
     let model_details=querytomodel(query);
 
     let redisres=await redisgetcomp(query,model_details);
     // let redisres=[]
-    console.log(redisres);
     if(redisres.length!=0){
         res.send(redisres)
-        console.log("redisres")
-
+        console.log("redisres use in page search")
+        
     }else{
         let mongodbres=await trycatchexec(mongosearchpage,(err)=>{console.log(err.message,"mongosearch")},query,model_details);
-
+        
         if (mongodbres){
+            console.log("mongo",JSON.stringify(mongodbres).slice(0,300))
             res.send(mongodbres);
-
+            // return;
             trycatchexec(addredis,(err)=>{console.log(err.message,"redisadd")},mongodbres,model_details)
 
         }else{
             res.send([])
         }
-        console.log("mongodb used")
+        console.log("mongodb used in page search")
     }
 
 }

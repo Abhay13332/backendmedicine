@@ -24,7 +24,7 @@ importers:
         specifier: ^8.13.2
         version: 8.13.2
       redismn:
-        specifier: ^1.0.28
+        specifier: ^1.0.9
         version: 1.0.28
     devDependencies:
       nodemon:
@@ -892,7 +892,7 @@ snapshots:
 
   mquery@5.0.0:
     dependencies:
-      debug: 4.4.0(supports-color@5.5.0)
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
