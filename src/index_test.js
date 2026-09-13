@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 app.post("/search/pagesearch", trycatchhandler(mainpagesearch,(err)=>{console.log(err)}))
-app.post("/search/searchbarquery",trycatchhandler(searchbarquery,(err)=>{console.log(err.message)}))
+app.post("/search/searchbarquery",trycatchhandler(searchbarquery,(err)=>{console.log(err.message)}),()=>{console.log("send")})
 app.listen(8005,()=>{
     console.log(`Server started on port ${8005}`);
 })
@@ -27,5 +27,5 @@ app.post("/search/medicsearch",trycatchhandler(medicsearch,(err,res)=>{console.l
 res.send(err.message)}))
 // console.log(await searchbarquery({body:{query:"anu"}}));
 // console.log(await redis.jsongetAll("anu","search"));
-redisgetcomp("Above 5-D Capsule",[capsule,"capsule","capsulename"])
+// redisgetcomp("Above 5-D Capsule",[capsule,"capsule","capsulename"])
 app.post("/getrandomdata",trycatchhandler(getrandom,(err,res)=>{console.log(err.message);res.send(err.message)}));
