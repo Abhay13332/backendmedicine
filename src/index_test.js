@@ -27,5 +27,5 @@ app.post("/search/medicsearch",trycatchhandler(medicsearch,(err,res)=>{console.l
 res.send(err.message)}))
 // console.log(await searchbarquery({body:{query:"anu"}}));
 // console.log(await redis.jsongetAll("anu","search"));
-redisgetcomp("Above 5-D Capsule",[capsule,"capsule","capsulename"])
+// redisgetcomp("Above 5-D Capsule",[capsule,"capsule","capsulename"])
 app.post("/getrandomdata",trycatchhandler(getrandom,(err,res)=>{console.log(err.message);res.send(err.message)}));
