@@ -81,7 +81,7 @@ export const redisset= async (name,searcharr,)=>{
    return await  redis.jsonset(name,searcharr,"search",180)
 }
 
-export const searchbarquery=async (req,res)=>{
+export const searchbarquery=async (req,res,next)=>{
     const query=req.body.query;
    const result= await redissearch(query);
    if(result){
@@ -94,4 +94,5 @@ export const searchbarquery=async (req,res)=>{
        res.send(mongodbresult);
        console.log("mongodbused");
    }
+   next()
 }
