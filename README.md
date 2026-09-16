@@ -9,7 +9,7 @@ anshuman singh
 # fronted link 
   - [medico](medico-project.onrender.com)
   - frontend repo link - https://github.com/Rogue-strider/Medico-Project 
-# apiendppoints
+# api endpoints
 ```
 
 /search/pagesearch:for erxact search for alternatives with same composition for searched medicine
