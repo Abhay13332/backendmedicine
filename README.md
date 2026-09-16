@@ -7,8 +7,8 @@ anshuman singh
 
 ```
 # fronted link 
-  - medico-project.onrender.com
-  - https://github.com/Rogue-strider/Medico-Project frontend repo link 
+  - [medico](medico-project.onrender.com)
+  - frontend repo link - https://github.com/Rogue-strider/Medico-Project 
 # apiendppoints
 ```
 
