@@ -6,6 +6,9 @@ abhay singh
 anshuman singh
 
 ```
+# fronted link 
+  - medico-project.onrender.com
+  - https://github.com/Rogue-strider/Medico-Project frontend repo link 
 # apiendppoints
 ```
 
