@@ -1,4 +1,4 @@
-ntoe:this is team project for byteverse team members 
+note:this is team project for byteverse team members 
 ```
 satyam jha
 anand k thakur
